@@ -19,7 +19,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef FONT5X7_H
 #define FONT5X7_H
 
-#include <avr/pgmspace.h>
+#ifndef NRF52840_XXAA
+  #include <avr/pgmspace.h>
+#endif
 
 // Standard ASCII 5x7 font
 static const unsigned char font5x7[] PROGMEM = {

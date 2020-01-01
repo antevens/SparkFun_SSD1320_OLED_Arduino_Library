@@ -19,7 +19,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef FONT8X16_H
 #define FONT8X16_H
 
-#include <avr/pgmspace.h>
+#ifndef NRF52840_XXAA
+  #include <avr/pgmspace.h>
+#endif
 
 static const unsigned char font8x16[] PROGMEM = {
 	// first row defines - FONTWIDTH, FONTHEIGHT, ASCII START CHAR, TOTAL CHARACTERS, FONT MAP WIDTH HIGH, FONT MAP WIDTH LOW (2,56 meaning 256)
